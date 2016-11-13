@@ -383,7 +383,7 @@ DEPENDENCIES
   capistrano-rails
   capistrano-rake
   capistrano-rbenv
-  capistrano-sidekiq
+  capistrano-sidekiq (= 0.5.4)
   capistrano3-puma
   capybara
   coffee-rails (~> 4.2)
