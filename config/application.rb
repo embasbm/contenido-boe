@@ -15,6 +15,6 @@ Bundler.require(*Rails.groups)
 module ContenidoBoe
   # ContenidoBoe Application class
   class Application < Rails::Application
-    config.autoload_paths += %W(#{config.root}/app/services)
+    config.autoload_paths += %W(#{config.root}/lib)
   end
 end

@@ -1,8 +1,8 @@
 # rubocop:disable LineLength
 # ImportData class
-class ImportData
+class Boe::ImportData
   def initialize(day = nil)
-    @day = day || Date.today.strftime('%Y%m%d')
+    @day = day || Date.today.strftime('%Y%m')
     @boe_url = 'https://www.boe.es'
     retriev_boe_data
   end
@@ -10,6 +10,7 @@ class ImportData
   def retriev_boe_data
     fetch_xml
     return @doc.children.first.content if @doc.children.first.name == 'error'
+    Rails.logger.info "====>Fetch boe data for day: #{@day.strftime}====>"
     new_diary = create_diary
     create_sections(new_diary)
   end
