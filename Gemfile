@@ -45,12 +45,12 @@ group :development do
   gem 'rubocop'
 end
 group :development do
-    gem "capistrano", '3.7.0.beta1'
+    gem "capistrano"
     gem 'capistrano-rbenv',   require: false
     gem 'capistrano-rails',   require: false
     gem 'capistrano-bundler', require: false
     gem 'capistrano3-puma',   require: false
-    gem 'capistrano-sidekiq', require: false
+    gem 'capistrano-sidekiq', github: 'seuros/capistrano-sidekiq'
     gem 'capistrano-figaro',  require: false
     gem 'capistrano-rake',    require: false
 end
