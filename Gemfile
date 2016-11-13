@@ -50,7 +50,7 @@ group :development do
     gem 'capistrano-rails',   require: false
     gem 'capistrano-bundler', require: false
     gem 'capistrano3-puma',   require: false
-    gem 'capistrano-sidekiq', require: false
+    gem 'capistrano-sidekiq', '0.5.3', require: false
     gem 'capistrano-figaro',  require: false
     gem 'capistrano-rake', require: false
 end
