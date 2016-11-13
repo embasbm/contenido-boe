@@ -64,7 +64,7 @@ GEM
     bson (4.1.1)
     builder (3.2.2)
     byebug (9.0.6)
-    capistrano (3.7.0.beta1)
+    capistrano (3.6.1)
       airbrussh (>= 1.0.0)
       capistrano-harrow
       i18n
