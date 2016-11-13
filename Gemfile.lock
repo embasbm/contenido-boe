@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/mongodb/mongoid.git
+  revision: 093d64ef14e38740fae2bf0ad293ea2b3db0bf6e
+  specs:
+    mongoid (6.0.2)
+      activemodel (~> 5.0)
+      mongo (~> 2.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -147,9 +155,10 @@ GEM
     minitest (5.9.1)
     mongo (2.3.1)
       bson (~> 4.1)
-    mongoid (6.0.2)
-      activemodel (~> 5.0)
-      mongo (~> 2.3)
+    mongoid-rspec (1.10.0)
+      mongoid (>= 3.0.1)
+      rake
+      rspec (>= 2.14)
     multi_json (1.12.1)
     nenv (0.3.0)
     nio4r (1.2.1)
@@ -242,8 +251,6 @@ GEM
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     shellany (0.0.1)
-    shoulda-matchers (3.1.1)
-      activesupport (>= 4.0.0)
     simplecov (0.12.0)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -313,7 +320,8 @@ DEPENDENCIES
   jquery-rails
   launchy
   listen (~> 3.0.5)
-  mongoid
+  mongoid!
+  mongoid-rspec
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   rails_layout
@@ -324,7 +332,6 @@ DEPENDENCIES
   rubocop
   sass-rails (~> 5.0)
   selenium-webdriver
-  shoulda-matchers
   simplecov
   spring
   spring-commands-rspec

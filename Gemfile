@@ -22,7 +22,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'high_voltage'
-gem 'mongoid'
+gem 'mongoid', git: 'https://github.com/mongodb/mongoid.git'
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
@@ -47,5 +47,5 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
-  gem 'shoulda-matchers'
+  gem 'mongoid-rspec'
 end
