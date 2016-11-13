@@ -45,7 +45,7 @@ group :development do
   gem 'rubocop'
 end
 group :development do
-    gem "capistrano"
+    gem "capistrano", '3.7.0.beta1'
     gem 'capistrano-rbenv',   require: false
     gem 'capistrano-rails',   require: false
     gem 'capistrano-bundler', require: false
