@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'diaries/index'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :diaries, only: [:index]
+  root to: 'diaries#index'
+  get '*path' => redirect('/')
 end
