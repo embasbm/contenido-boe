@@ -1,0 +1,6 @@
+
+---
+:verbose: false
+:concurrency: 5
+:queues:
+  - [boe_data, 1]

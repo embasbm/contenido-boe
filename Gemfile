@@ -13,6 +13,15 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'high_voltage'
 gem 'mongoid', git: 'https://github.com/mongodb/mongoid.git'
+
+gem "figaro"
+
+gem 'sidekiq'
+gem 'sidetiq'
+gem 'sidekiq-status'
+
+gem 'exception_notification'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
@@ -34,6 +43,13 @@ group :development do
   gem 'rb-inotify', require: false
   gem 'spring-commands-rspec'
   gem 'rubocop'
+end
+group :development do
+    gem 'capistrano',         require: false
+    gem 'capistrano-rbenv',   require: false
+    gem 'capistrano-rails',   require: false
+    gem 'capistrano-bundler', require: false
+    gem 'capistrano3-puma',   require: false
 end
 group :development, :test do
   gem 'factory_girl_rails'

@@ -17,3 +17,6 @@
 .byebug_history
 .
 cron_log.log
+
+# Ignore application configuration
+/config/application.yml
