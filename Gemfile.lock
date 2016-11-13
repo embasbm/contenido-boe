@@ -382,7 +382,7 @@ DEPENDENCIES
   better_errors
   bootstrap (~> 4.0.0.alpha3.1)
   byebug
-  capistrano
+  capistrano (~> 3.6)
   capistrano-bundler
   capistrano-figaro
   capistrano-rails
