@@ -1,0 +1,21 @@
+<div class="panel-group" id="accordionDepartmentsSection<%= section.id %>" role="tablist" aria-multiselectable="true">
+  <% departments.each do |department| %>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingDepartment">
+        <h4 class="panel-title">
+          <a  class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionDepartmentsSection<%= section.id %>" href="#collapseDepartment<%= department.id %>" aria-expanded="false" aria-controls="collapseDepartment<%= department.id %>"><%= department.name %></a>
+        </h4>
+      </div>
+      <div id="collapseDepartment<%= department.id %>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingDepartment">
+        <div class="panel-body">
+          <% unless department.epigraphs.empty? %>
+            <%= render partial: "epigraphs", locals: {epigraphs: department.epigraphs, department: department} %>
+          <% end %>
+          <% unless department.items.empty? %>
+            <%= render partial: "items", locals: {items: department.items, epigraph: department} %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

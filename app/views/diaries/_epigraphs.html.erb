@@ -1,0 +1,18 @@
+<div class="panel-group" id="accordionEpigraphDepartment<%= department.id %>" role="tablist" aria-multiselectable="true">
+  <% epigraphs.each do |epigraph| %>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingEpigraph">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionEpigraphDepartment<%= department.id %>" href="#collapseEpigraph<%= epigraph.id %>" aria-expanded="false" aria-controls="collapseEpigraph<%= epigraph.id %>">
+            <%= epigraph.name %>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseEpigraph<%= epigraph.id %>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEpigraph">
+        <div class="panel-body">
+          <%= render partial: "items", locals: {items: epigraph.items, epigraph: epigraph} %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
