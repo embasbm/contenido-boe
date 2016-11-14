@@ -1,3 +1,12 @@
+defaults: &defaults
+  host: localhost
+  # slaves:
+  #   - host: slave1.local
+  #     port: 27018
+  #   - host: slave2.local
+  #     port: 27019
+
+
 development:
   # Configure available database clients. (required)
   clients:
@@ -146,8 +155,9 @@ test:
 production:
   clients:
     default:
-      database: <%= Figaro.env.mongoid_database %>
-      host: <%= Figaro.env.mongoid_host %>
-      port: <%= Figaro.env.mongoid_port %>
-      username: <%= Figaro.env.mongoid_username %>
-      password: <%= Figaro.env.mongoid_password %>
+      database: <%= ENV['mongoid_database'] %>
+      host: <%= ENV['mongoid_host'] %>
+      port: <%= ENV['mongoid_port'] %>
+      username: <%= ENV['mongoid_username'] %>
+      password: <%= ENV['mongoid_password'] %>
+
