@@ -13,6 +13,6 @@ class BoeData
 
 
   def perform
-    XmlBoe::ImportData.new
+    ImportData.new
   end
 end
