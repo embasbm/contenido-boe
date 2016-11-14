@@ -1,4 +1,4 @@
-server '46.101.81.212', roles: [:web, :app, :db], primary: true
+server 'contenido-boe.es', roles: [:web, :app, :db], primary: true
 
 set :stage,       :production
 set :rails_env,   :production
