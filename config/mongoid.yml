@@ -10,6 +10,15 @@ development:
 test:
   clients:
     default:
+      database: contenido_boe_test
+      hosts:
+        - localhost:27017
+      options:
+  options:
+
+production:
+  clients:
+    default:
       database: <%= ENV['mongoid_database'] %>
       username: <%= ENV['mongoid_username'] %>
       password: <%= ENV['mongoid_password'] %>
@@ -19,4 +28,3 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
-
