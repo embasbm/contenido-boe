@@ -3,9 +3,9 @@ server 'contenido-boe.es', roles: [:web, :app, :db], primary: true
 set :stage,       :production
 set :rails_env,   :production
 
-role :app, %w(deploy@46.101.81.212)
-role :web, %w(deploy@46.101.81.212)
-role :db,  %w(deploy@46.101.81.212)
+role :app, %w(deploy@contenido-boe.es)
+role :web, %w(deploy@contenido-boe.es)
+role :db,  %w(deploy@contenido-boe.es)
 
 set :sidekiq_env,           'production'
 set :sidekiq_processes,     2
