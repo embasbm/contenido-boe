@@ -1,6 +1,6 @@
 # rubocop:disable LineLength
 # ImportData class
-class Boe::ImportData
+class XmlBoe::ImportData
   def initialize(day = nil)
     @day = day || Date.today.strftime('%Y%m')
     @boe_url = 'https://www.boe.es'
