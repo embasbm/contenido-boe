@@ -45,14 +45,14 @@ group :development do
   gem 'rubocop'
 end
 group :development do
-    gem "capistrano", '3.4.0'
-    gem 'capistrano-rbenv',    '2.0.4',   require: false
-    gem 'capistrano-rails',    '1.1.6',   require: false
-    gem 'capistrano-bundler',  '~> 1.1',  require: false
-    gem 'capistrano3-puma',    '1.2.1',   require: false
-    gem 'capistrano-sidekiq',  '0.5.4',   require: false
-    gem 'capistrano-figaro',   '1.0.0.0', require: false
-    gem 'capistrano-rake',     '0.1.0',   require: false
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
+  gem 'capistrano-sidekiq', require: false
+  gem 'capistrano-figaro',  require: false
+  gem 'capistrano-rake',    require: false
 end
 group :development, :test do
   gem 'factory_girl_rails'
