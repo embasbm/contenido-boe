@@ -10,7 +10,7 @@ class ImportData
   def retriev_boe_data
     fetch_xml
     return @doc.children.first.content if @doc.children.first.name == 'error'
-    Rails.logger.info "====>Fetch boe data for day: #{@day.strftime}====>"
+    Rails.logger.info "====>Fetch boe data for day: #{@day.to_date.strftime}====>"
     new_diary = create_diary
     create_sections(new_diary)
   end
