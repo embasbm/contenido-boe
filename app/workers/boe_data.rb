@@ -8,7 +8,7 @@ class BoeData
   include Sidetiq::Schedulable
   sidekiq_options queue: :boe_data, priority: :low
   recurrence backfill: true do
-    daily.hour_of_day(11).minute_of_hour(30)
+    daily.hour_of_day(05).minute_of_hour(30)
   end
 
 
