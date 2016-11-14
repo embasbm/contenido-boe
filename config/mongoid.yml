@@ -1,17 +1,8 @@
-defaults: &defaults
-  host: localhost
-  # slaves:
-  #   - host: slave1.local
-  #     port: 27018
-  #   - host: slave2.local
-  #     port: 27019
-
-
-development:
+development: &defaults
   # Configure available database clients. (required)
-  clients:
+  sessions:
     # Defines the default client. (required)
-    default:
+    default: &default_session
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
       database: contenido_boe_development
@@ -141,23 +132,20 @@ development:
     # otherwise.(default: :info)
     # log_level: :info
 test:
-  clients:
+  <<: *defaults
+  sessions:
     default:
+      <<: *default_session
       database: contenido_boe_test
-      hosts:
-        - localhost:27017
-      options:
-        read:
-          mode: :primary
-        max_pool_size: 1
 
 # set these environment variables on your prod server
 production:
-  clients:
+  <<: *defaults
+  sessions:
     default:
+      <<: *default_session
       database: <%= ENV['mongoid_database'] %>
-      host: <%= ENV['mongoid_host'] %>
-      port: <%= ENV['mongoid_port'] %>
       username: <%= ENV['mongoid_username'] %>
       password: <%= ENV['mongoid_password'] %>
-
+      hosts:
+        - <%= ENV['mongoid_host'] %>:<%= ENV['mongoid_port'] %>
