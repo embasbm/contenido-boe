@@ -2,7 +2,7 @@
 # ImportData class
 class ImportData
   def initialize(day = nil)
-    @day = day || Date.today.strftime('%Y%m')
+    @day = day || Date.today.strftime('%Y%m%d')
     @boe_url = 'https://www.boe.es'
     retriev_boe_data
   end
