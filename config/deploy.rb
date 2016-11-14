@@ -49,21 +49,13 @@ namespace :deploy do
   desc 'Initial Deploy'
   task :initial do
     on roles(:app) do
-      Rake::Task['puma:start'].reenable
+      Rake::Task["sidekiq:stop"].reenable
       before 'deploy:restart', 'puma:start'
       invoke 'deploy'
     end
   end
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      Rake::Task['puma:restart'].reenable
-      invoke 'puma:restart'
-    end
-  end
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
-  after  :finishing,    :restart
 end
 
 namespace :figaro do
