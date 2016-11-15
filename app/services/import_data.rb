@@ -30,7 +30,7 @@ class ImportData
     nbo             = @doc.xpath('//sumario/diario').first['nbo']
     summary_url_pdf = @boe_url + @doc.xpath('//sumario/diario/sumario_nbo/urlPdf').first.content
     fecha           = @doc.xpath('//sumario/meta/fecha').first.content.titleize
-    new_diary       = Diary.find_or_create_by(date_pub: date_pub, nbo: nbo, pdf_url: summary_url_pdf, fecha: fecha)
+    new_diary       = Diary.find_or_create_by(date_pub: date_pub, nbo: nbo, pdf_url: summary_url_pdf, fecha: fecha.to_time)
     new_diary
   end
 
