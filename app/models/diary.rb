@@ -4,6 +4,7 @@ class Diary
   field :date_pub, type: String
   field :nbo, type: String
   field :pdf_url, type: String
+  field :fecha, type: String
 
   embeds_many :sections
 end
