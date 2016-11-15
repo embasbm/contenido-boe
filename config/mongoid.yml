@@ -5,16 +5,20 @@ development:
       hosts:
         - localhost:27017
       options:
+        # Change the default write concern. (default = { w: 1 })
+  # Configure Mongoid specific options. (optional)
   options:
-
+    # Include the root model name in json serialization. (default: false)
 test:
   clients:
     default:
       database: contenido_boe_test
       hosts:
-        - localhost:27017
+        -localhost:27017
       options:
+        # Change the default write concern. (default = { w: 1 })
   options:
+    # Include the root model name in json serialization. (default: false)
 
 production:
   clients:
@@ -22,8 +26,8 @@ production:
       database: <%= ENV['mongoid_database'] %>
       username: <%= ENV['mongoid_username'] %>
       password: <%= ENV['mongoid_password'] %>
-      hosts:
-        - <%= ENV['mongoid_host'] %>:<%= ENV['mongoid_port'] %>
+      host: <%= ENV['mongoid_host'] %>
+      port: <%= ENV['mongoid_port'] %>
       options:
         read:
           mode: :primary

@@ -1,6 +1,7 @@
 # rubocop:disable LineLength
 # ImportData class
 module XmlBoe
+  # ImportData class
   class ImportData
     def initialize(day = nil)
       @day = day || Date.today.strftime('%Y%m')

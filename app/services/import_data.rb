@@ -1,4 +1,5 @@
 # rubocop:disable LineLength
+# rubocop:disable Metrics/AbcSize
 # ImportData class
 class ImportData
   def initialize(day = nil)

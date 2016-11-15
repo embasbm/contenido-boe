@@ -14,7 +14,7 @@ gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'high_voltage'
 gem 'mongoid', git: 'https://github.com/mongodb/mongoid.git'
 
-gem "figaro"
+gem 'figaro'
 
 gem 'exception_notification'
 
