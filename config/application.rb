@@ -17,5 +17,9 @@ module ContenidoBoe
   class Application < Rails::Application
     config.autoload_paths += %W(#{config.root}/lib)
     config.autoload_paths += %W(#{config.root}/app/services)
+    config.mongoid.logger = Logger.new($stdout, :warn)
+    config.generators do |g|
+      g.orm :mongoid
+    end
   end
 end
