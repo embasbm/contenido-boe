@@ -16,8 +16,6 @@ module ContenidoBoe
   # ContenidoBoe Application class
   class Application < Rails::Application
     config.autoload_paths += %W(#{config.root}/lib)
-    config.autoload_paths += %W(#{config.root}/app/workers)
     config.autoload_paths += %W(#{config.root}/app/services)
-    config.active_job.queue_adapter = :sidekiq
   end
 end
