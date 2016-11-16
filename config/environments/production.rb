@@ -34,9 +34,9 @@ Rails.application.configure do
   config.action_mailer.logger = ActiveSupport::Logger.new('mailer.log')
   config.action_mailer.logger.level = ActiveSupport::Logger::Severity::INFO
 
-  config.middleware.use ExceptionNotification::Rack, email: {
-    email_prefix: '[ERROR in contenidoboe in PRODUCTION SERVER ]',
-    sender_address: %(GeNotifier <notifier@contenidoboe.es>),
-    exception_recipients: %w(embasbm@gmail.com)
-  }
+  # config.middleware.use ExceptionNotification::Rack, email: {
+  #   email_prefix: '[ERROR in contenidoboe in PRODUCTION SERVER ]',
+  #   sender_address: %(GeNotifier <notifier@contenidoboe.es>),
+  #   exception_recipients: %w(embasbm@gmail.com)
+  # }
 end
