@@ -144,9 +144,5 @@ test:
 production:
   clients:
     default:
-      database: <%= ENV['mongoid_database'] %>
-      username: <%= ENV['mongoid_username'] %>
-      password: <%= ENV['mongoid_password'] %>
-      hosts:
-        -<%= ENV['mongoid_host'] %>:<%= ENV['mongoid_port'] %>
+      uri: <%= "mongodb://#{ENV['mongoid_username']}:#{ENV['mongoid_password']}@#{ENV['mongoid_host']}:#{ENV['mongoid_port']}/#{ENV['mongoid_database']}" %>
 
