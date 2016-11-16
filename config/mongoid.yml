@@ -148,5 +148,5 @@ production:
       username: <%= ENV['mongoid_username'] %>
       password: <%= ENV['mongoid_password'] %>
       hosts:
-        - <%= ENV['mongoid_host'] %>:<%= ENV['mongoid_port'] %>
+        -<%= ENV['mongoid_host'] %>:<%= ENV['mongoid_port'] %>
 
