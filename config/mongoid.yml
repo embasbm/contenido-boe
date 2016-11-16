@@ -144,14 +144,9 @@ test:
 production:
   clients:
     default:
-      database: contenido_boe_production
-      # Provides the hosts the default client can connect to. Must be an array
-      # of host:port pairs. (required)
+      database: <%= ENV['mongoid_database'] %>
+      username: <%= ENV['mongoid_username'] %>
+      password: <%= ENV['mongoid_password'] %>
       hosts:
-        - localhost:27017
-      # database: <%= ENV['mongoid_database'] %>
-      # username: <%= ENV['mongoid_username'] %>
-      # password: <%= ENV['mongoid_password'] %>
-      # hosts:
-      #   - <%= ENV['mongoid_host'] %>:<%= ENV['mongoid_port'] %>
+        - <%= ENV['mongoid_host'] %>:<%= ENV['mongoid_port'] %>
 
