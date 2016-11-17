@@ -27,6 +27,7 @@ class ImportData
   end
 
   def create_diary
+    Diary.delete_all
     date_pub        = @doc.xpath('//sumario/meta/fechaPub').first.content.titleize
     nbo             = @doc.xpath('//sumario/diario').first['nbo']
     summary_url_pdf = @boe_url + @doc.xpath('//sumario/diario/sumario_nbo/urlPdf').first.content
