@@ -13,7 +13,7 @@ Rails.application.config.action_controller.forgery_protection_origin_check =
 
 # Make Ruby 2.4 preserve the timezone of the receiver when calling `to_time`.
 # Previous versions had false.
-ActiveSupport.to_time_preserves_timezone = true
+# ActiveSupport.to_time_preserves_timezone = true
 
 # Do not halt callback chains when a callback returns false.
 # Previous versions had true.
