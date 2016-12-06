@@ -1,0 +1,37 @@
+<div class="panel-group" id="accordionDiary" role="tablist" aria-multiselectable="true">
+  <% if @items.empty? %>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingDiary">
+        <h4 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionDiary" href="#collapseDiary" aria-expanded="false" aria-controls="collapseDiary">
+            <%= Date.today.strftime %>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseDiary" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingDiary">
+        <div class="panel-body">
+          No items found for <%= params[:search] %>!
+        </div>
+      </div>
+    </div>
+  <% else %>
+    <div class="panel-group" id="accordionItemEpigraph" role="tablist" aria-multiselectable="true">
+      <% @items.each do |item| %>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingDiary">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionDiary" href="#collapseDiary" aria-expanded="false" aria-controls="collapseDiary">
+                <%= item.item_id %>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseDiary" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingDiary">
+            <div class="panel-body">
+              <h5><%= item.title %><small> | <%= link_to 'PDF', item.pdf_url, target: "_blank", class: 'btn btn-default' %></small></h5>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

@@ -1,31 +1,31 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-gem 'puma', '~> 3.0'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
+gem 'rails', '4.2.4'
+gem 'puma'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'jquery-rails'
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.5'
+gem 'turbolinks'
+gem 'jbuilder'
 gem 'twitter-bootstrap-rails'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'bootstrap', '~> 4.0.0.alpha3.1'
+gem 'bootstrap'
 gem 'high_voltage'
-gem 'mongoid', git: 'https://github.com/mongodb/mongoid.git'
-
+gem 'mongoid'
+gem 'mongoid-elasticsearch'
 gem 'figaro'
-
 gem 'exception_notification'
 
 group :development, :test do
-  gem 'byebug', platform: :mri
+  gem 'byebug'
+  gem 'rb-readline'
 end
 group :development do
   gem 'web-console'
-  gem 'listen', '~> 3.0.5'
+  gem 'listen'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen'
 end
 group :development do
   gem 'better_errors'
