@@ -39,19 +39,17 @@
   <body>
 
     <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <a class="navbar-brand" href="/">Contingut BOE</a>
-       </div>
+      <a class="navbar-brand" href="/">Index BOE</a>
     </div>
-
-    <div class="container-fluid">
-      <div class="row">
-        <%= bootstrap_flash %>
-        <%= yield %>
+    <div class="container">
+      <div class="container-fluid">
+        <div class="row">
+          <% flash.each do |key, value| %>
+            <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+          <% end %>
+          <%= yield %>
+        </div>
       </div>
-      <footer>
-        <%= render 'layouts/footer' %>
-      </footer>
     </div> <!-- /container -->
   </body>
 </html>

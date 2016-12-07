@@ -10,8 +10,11 @@
   background-color: #f0f8ff;
 }
 .navbar-default {
-  background-color: #f7cfcf;
+  background-color: #000;
 }
 .collapse-item {
   background-color: #ffffff;
+}
+.navbar-default .navbar-brand {
+  color: #fff;
 }
