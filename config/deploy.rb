@@ -1,7 +1,7 @@
 # rubocop:disable LineLength
 # server 'staging.api.airtimerewards.co.uk', roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'git@bitbucket.org:embamoussa/contenido-boe.git'
+set :repo_url,        'git@github.com:embasbm/contenido-boe.git'
 set :application,     'contenido-boe'
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
