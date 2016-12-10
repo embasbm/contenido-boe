@@ -16,6 +16,7 @@ gem 'mongoid'
 gem 'mongoid-elasticsearch'
 gem 'figaro'
 gem 'exception_notification'
+gem 'meta-tags'
 
 group :development, :test do
   gem 'byebug'
