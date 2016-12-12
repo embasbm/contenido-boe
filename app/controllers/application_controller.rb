@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
     site_name   = "Contenido BOE indexado"
     title       = [controller_name, action_name].join(" ")
     description = "Indexacion de los contenidos diarios del Boletin Oficial del Estado. El BOE hecho facil de leer."
-    image       = options[:image] || image_url('logo.png')
+    image       = options[:image] || ActionController::Base.helpers.image_path('contenido-boe.png')
     current_url = request.url
 
     # Let's prepare a nice set of defaults
@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
       keywords:    %w[BOE, Oficial, Gaceta, Indexado],
       twitter: {
         site_name: site_name,
-        site: '@embairik',
+        site: '@ContenidoBoe',
         card: 'owner',
         description: description,
         image: image
