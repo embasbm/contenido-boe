@@ -17,6 +17,7 @@ gem 'mongoid-elasticsearch'
 gem 'figaro'
 gem 'exception_notification'
 gem 'meta-tags'
+gem 'twitter'
 
 group :development, :test do
   gem 'byebug'
