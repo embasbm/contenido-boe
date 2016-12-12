@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   def prepare_meta_tags(options={})
     site_name   = "Contenido BOE indexado"
     title       = [controller_name, action_name].join(" ")
-    description = "Indexacion de los contenidos diarios del Boletin Oficial del Estado. El BOE hecho facil de leer."
+    description = "Indexación de los contenidos diarios del Boletin Oficial del Estado Español. El BOE hecho fácil de leer y buscar contenido."
     image       = options[:image] || ActionController::Base.helpers.image_path('contenido-boe.png')
     current_url = request.url
 
@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
       title:       title,
       image:       image,
       description: description,
-      keywords:    %w[BOE, Oficial, Gaceta, Indexado],
+      keywords:    %w[BOE Boletin Oficial Estado España Indexado],
       twitter: {
         site_name: site_name,
         site: '@ContenidoBoe',
