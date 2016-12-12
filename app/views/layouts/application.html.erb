@@ -2,10 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+
     <%= display_meta_tags %>
+
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Contingutboe" %></title>
+
+    <title><%= content_for?(:title) ? yield(:title) : "Contenido BOE Indexado" %></title>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag "application", :media => "all" %>
