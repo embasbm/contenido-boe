@@ -2,6 +2,7 @@
 # server 'staging.api.airtimerewards.co.uk', roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:embasbm/contenido-boe.git'
+set :ssh_options,     { forward_agent: true }
 set :application,     'contenido-boe'
 set :user,            'deploy'
 set :puma_threads,    [4, 16]
