@@ -15,10 +15,7 @@ class TwitterManager
   def fetch_tweets(keyword)
     @client.search("##{keyword} -rt", :lang => "es").each do |tweet|
       if tweet.created_at > 1.hour.ago && tweet.urls.count == 1 && tweet.urls.first.expanded_url.present? && tweet.urls.first.expanded_url.host.include?(keyword)
-        # @client.retweet!(tweet)
-        # print "\n===== #{tweet.user.name} - #{tweet.created_at.strftime('%H')} - #{tweet.urls.count} ===== YES RETWEET  ====== #{tweet.urls.first.try(:expanded_url).try(:host)}"
-      else
-        # print "\n----- #{tweet.user.name} - #{tweet.created_at.strftime('%H')} - #{tweet.urls.count} ----- NOP sorry ----! ----- #{tweet.urls.first.try(:expanded_url).try(:host)}"
+        @client.retweet!(tweet)
       end
     end
   end
